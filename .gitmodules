@@ -1,0 +1,4 @@
+[submodule "mbedtls/src/main/cpp/mbedtls"]
+	path = mbedtls/src/main/cpp/mbedtls
+	url = https://github.com/ARMmbed/mbedtls.git
+	branch = master

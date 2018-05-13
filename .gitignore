@@ -1,0 +1,7 @@
+/.gradle
+/.idea
+.externalNativeBuild/
+build/
+*.iml
+/distribution/mklibtest/
+/local.properties

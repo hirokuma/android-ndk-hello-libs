@@ -24,4 +24,4 @@ set(CMAKE_VERBOSE_MAKEFILE on)
 set(ENABLE_TESTING OFF)
 set(USE_STATIC_MBEDTLS_LIBRARY OFF)
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/mbedtls)
+add_subdirectory(mbedtls)

@@ -2,6 +2,8 @@ hello-libs
 =========
 hello-libs is a sample that shows you how to manage 3rd party C/C++ libraries with Android Studio.
 
+* [original](https://github.com/googlesamples/android-ndk/tree/master/hello-libs)
+
 Introduction
 ------------
 This sample uses the [Android Studio CMake plugin](http://tools.android.com/tech-docs/external-c-builds) with external library support. It demos how to:

@@ -1,4 +1,4 @@
-include ':app', ':mklib'
+include ':app', ':mklib', ':mbedtls'
 
 // To generate libs used in this sample:
 //   1) enable the gen-libs at end of this file

@@ -32,6 +32,12 @@ add_library(lib_gperf SHARED IMPORTED)
 set_target_properties(lib_gperf PROPERTIES IMPORTED_LOCATION
     ${distribution_DIR}/gperf/lib/${ANDROID_ABI}/libgperf.so)
 
+########################################
+add_library(lib_mbedtls STATIC IMPORTED)
+set_target_properties(lib_mbedtls PROPERTIES IMPORTED_LOCATION
+    ${distribution_DIR}/mbedtls/lib/${ANDROID_ABI}/libmbedcrypto.a)
+########################################
+
 # build application's shared lib
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 
@@ -46,4 +52,5 @@ target_link_libraries(hello-libs
                       android
                       lib_gmath
                       lib_gperf
+                      lib_mbedtls
                       log)

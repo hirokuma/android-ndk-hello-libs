@@ -12,6 +12,7 @@ android {
         externalNativeBuild {
             cmake {
                 arguments '-DANDROID_STL=c++_static'
+                targets 'lib_mbedtls'
             }
         }
     }
@@ -47,14 +48,15 @@ dependencies {
 // into $project/distribution directory, does NOT affect application module;
 // Only enable these when want to build libs (together with note
 // inside settings.gradle)
-/*
+
 tasks.whenTaskAdded { task ->
     if (task.name == 'externalNativeBuildRelease') {
-        task.dependsOn ":gen-libs:externalNativeBuildRelease"
+//        task.dependsOn ":gen-libs:externalNativeBuildRelease"
         task.dependsOn ":mklib:externalNativeBuildRelease"
+        task.dependsOn ":mbedtls:externalNativeBuildRelease"
     } else if (task.name == 'externalNativeBuildDebug') {
-        task.dependsOn ":gen-libs:externalNativeBuildDebug"
+//        task.dependsOn ":gen-libs:externalNativeBuildDebug"
         task.dependsOn ":mklib:externalNativeBuildDebug"
+        task.dependsOn ":mbedtls:externalNativeBuildDebug"
     }
 }
-*/

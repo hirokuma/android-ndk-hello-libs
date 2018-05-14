@@ -7,6 +7,12 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+        externalNativeBuild {
+            cmake {
+                arguments '-DENABLE_TESTING=OFF'
+                //, '-DENABLE_PROGRAMS=OFF'
+            }
+        }
     }
     buildTypes {
         release {

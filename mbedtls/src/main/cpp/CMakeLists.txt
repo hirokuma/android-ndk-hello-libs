@@ -22,20 +22,5 @@ cmake_minimum_required(VERSION 3.4.1)
 set(MY_LIBNAME mbedtls)
 
 set(CMAKE_VERBOSE_MAKEFILE on)
-set(ENABLE_TESTING OFF)
-set(USE_STATIC_MBEDTLS_LIBRARY ON)
 
-add_subdirectory(mbedtls)
-
-# copy out the lib binary... need to leave the static lib around to pass gradle check
-#set(distribution_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../../distribution)
-#add_custom_command(TARGET ${MY_LIBNAME} POST_BUILD
-#                   COMMAND "${CMAKE_COMMAND}" -E
-#                   copy "${CMAKE_CURRENT_SOURCE_DIR}/mbedtls/library/libmbedcrypto.a" "${distribution_DIR}/${MY_LIBNAME}/lib/"
-#                   COMMENT "Copying ${MY_LIBNAME} to output directory")
-
-# copy out lib header file...
-#add_custom_command(TARGET ${MY_LIBNAME} POST_BUILD
-#                   COMMAND "${CMAKE_COMMAND}" -E
-#                   copy "${CMAKE_CURRENT_SOURCE_DIR}/mbedtls/include" "${distribution_DIR}/${MY_LIBNAME}/"
-#                   COMMENT "Copying ${MY_LIBNAME} to output directory")
+add_subdirectory(${MY_LIBNAME})

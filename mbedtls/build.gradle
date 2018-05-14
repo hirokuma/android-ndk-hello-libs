@@ -10,7 +10,6 @@ android {
         externalNativeBuild {
             cmake {
                 arguments '-DENABLE_TESTING=OFF'
-                //, '-DENABLE_PROGRAMS=OFF'
             }
         }
     }
